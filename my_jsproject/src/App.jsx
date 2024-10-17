@@ -35,16 +35,15 @@
 // export default App
 
 
-import{BrowserRouter,Routes,Route} from 'react-router-dom'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Layout from './Component/Layout'
 import Home from './Component/Home'
-import About from './Component/About'
 import Contact from './Component/Contact'
 import Product from './Component/Product'
+import About from './Component/About'
 
-function App(){
+export default function App(){
   return(
-    <>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Layout/>}>
@@ -52,13 +51,12 @@ function App(){
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}/>
       <Route path='product' element={<Product/>}/>
-
-
       </Route>
     </Routes>
+    <a href="" target="_blank">
+          <img src={reactimg} className="Img react" alt="React img" />
+      </a>
     </BrowserRouter>
-    </>
   )
 }
-export default App
 
